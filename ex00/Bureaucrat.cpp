@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:09:54 by adhaka            #+#    #+#             */
-/*   Updated: 2024/03/03 06:50:13 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/01 23:40:14 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name)
 	_grade = grade;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &other) : _name(other._name), _grade(other._grade) {}
+Bureaucrat::Bureaucrat(const Bureaucrat &src) : _name(src._name), _grade(src._grade) {}
 
 Bureaucrat::~Bureaucrat() {}
 
-Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src)
 {
-	if (this != &other)
-		_grade = other._grade;
+	if (this != &src)
+		_grade = src._grade;
 	return *this;
 }
 
@@ -68,6 +68,6 @@ void Bureaucrat::decrementGrade()
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucrat)
 {
-	os << bureaucrat.getName() << ", bureaucrat's grade is " << bureaucrat.getGrade();
+	os << bureaucrat.getName() << ", Bureaucrat's grade is " << bureaucrat.getGrade();
 	return os;
 }
