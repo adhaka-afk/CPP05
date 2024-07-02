@@ -6,13 +6,12 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:18:42 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/02 07:02:11 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/03 00:31:49 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
 #include <iostream>
-#include <map>
 
 Intern::Intern()
 {
