@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:18:42 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/03 00:31:49 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/03 01:21:12 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,12 @@ AForm *Intern::makeForm(const std::string &formName, const std::string &target)
 	};
 	const int numEntries = sizeof(formCreationEntries) / sizeof(FormCreationEntry);
 
-	for (int i = 0; i < numEntries; ++i)
+	for (int a = 0; a < numEntries; ++a)
 	{
-		if (formCreationEntries[i].formName == formName)
+		if (formCreationEntries[a].formName == formName)
 		{
 			std::cout << "Intern creates " << formName << std::endl;
-			return formCreationEntries[i].create(target);
+			return formCreationEntries[a].create(target);
 		}
 	}
 
