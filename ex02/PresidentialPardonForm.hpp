@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:16:35 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/01 18:47:21 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/02 05:29:10 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class PresidentialPardonForm : public AForm
 
 	public:
 		PresidentialPardonForm(const std::string &target);
+		PresidentialPardonForm(const PresidentialPardonForm &src);
+		PresidentialPardonForm &operator = (const PresidentialPardonForm &src);
 		virtual ~PresidentialPardonForm();
 
 		void execute(const Bureaucrat &executor) const;

@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:16:48 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/01 18:47:38 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/02 05:33:45 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class ShrubberyCreationForm : public AForm
 
 	public:
 		ShrubberyCreationForm(const std::string &target);
+		ShrubberyCreationForm(const ShrubberyCreationForm &src);
+		ShrubberyCreationForm &operator = (const ShrubberyCreationForm &src);
 		virtual ~ShrubberyCreationForm();
 
 		void execute(const Bureaucrat &executor) const;
