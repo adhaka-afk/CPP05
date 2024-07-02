@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:09:54 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/01 23:40:14 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/02 03:30:18 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return "Grade is Too Low";
 }
+
+Bureaucrat::Bureaucrat()
+{}
 
 Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name)
 {
