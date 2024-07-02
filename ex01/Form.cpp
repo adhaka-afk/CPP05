@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:11:02 by adhaka            #+#    #+#             */
-/*   Updated: 2024/06/29 09:03:21 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/02 02:36:35 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,16 @@ Form::Form(const std::string &name, int gradeToSign, int gradeToExecute)
 		throw GradeTooLowException();
 }
 
-Form::Form(const Form &other) : _name(other._name), _isSigned(other._isSigned), _gradeToSign(other._gradeToSign), _gradeToExecute(other._gradeToExecute)
+Form::Form(const Form &src) : _name(src._name), _isSigned(src._isSigned), _gradeToSign(src._gradeToSign), _gradeToExecute(src._gradeToExecute)
 {
 }
 
 Form::~Form() {}
 
-Form &Form::operator=(const Form &other)
+Form &Form::operator=(const Form &src)
 {
-	if (this != &other)
-		_isSigned = other._isSigned;
+	if (this != &src)
+		_isSigned = src._isSigned;
 	return *this;
 }
 
@@ -74,9 +74,11 @@ const char *Form::GradeTooLowException::what() const throw()
 
 std::ostream &operator<<(std::ostream &os, const Form &form)
 {
-	os << "Form: " << form.getName()
+	os <<"xxxxxxx----form details----xxxxxxx\n" << std::endl
+	   << "Form: " << form.getName()
 	   << ", Sign Grade: " << form.getGradeToSign()
 	   << ", Execute Grade: " << form.getGradeToExecute()
-	   << ", Signed: " << (form.isSigned() ? "Yes" : "No");
+	   << ", Signed: " << (form.isSigned() ? "Yes" : "No") << std::endl
+	   << "\nxxxxxxx----------------------xxxxxxx" << std::endl;
 	return os;
 }

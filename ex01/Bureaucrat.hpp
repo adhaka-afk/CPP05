@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:10:07 by adhaka            #+#    #+#             */
-/*   Updated: 2024/03/04 05:11:38 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/02 00:07:08 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ class Bureaucrat
 				virtual const char* what() const throw();
 		};
 		Bureaucrat(const std::string &name, int grade);
-		Bureaucrat(const Bureaucrat &other);
+		Bureaucrat(const Bureaucrat &src);
 		~Bureaucrat();
 
-		Bureaucrat &operator = (const Bureaucrat &other);
+		Bureaucrat &operator = (const Bureaucrat &src);
 
 		const std::string &getName() const;
 		int getGrade() const;

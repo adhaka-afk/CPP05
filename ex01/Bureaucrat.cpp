@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:10:04 by adhaka            #+#    #+#             */
-/*   Updated: 2024/03/04 05:17:37 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/02 00:11:02 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name)
 	_grade = grade;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &other) : _name(other._name), _grade(other._grade) {}
+Bureaucrat::Bureaucrat(const Bureaucrat &src) : _name(src._name), _grade(src._grade) {}
 
 Bureaucrat::~Bureaucrat() {}
 
-Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src)
 {
-	if (this != &other)
-		_grade = other._grade;
+	if (this != &src)
+		_grade = src._grade;
 	return *this;
 }
 
@@ -72,7 +72,7 @@ void Bureaucrat::signForm(Form &form)
 	try
 	{
 		form.beSigned(*this);
-		std::cout << _name << "signs" << form.getName() << std::endl;
+		std::cout << _name << " signs " << form.getName() << std::endl;
 	}
 	catch(const Form::GradeTooLowException& e)
 	{
