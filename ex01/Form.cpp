@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:11:02 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/02 03:33:31 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/03 01:15:17 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 Form::Form() : _name("DefaultForm"), _isSigned(false), _gradeToSign(0), _gradeToExecute(0)
 {
 }
+
 Form::Form(const std::string &name, int gradeToSign, int gradeToExecute)
 	: _name(name), _isSigned(false), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
 {
