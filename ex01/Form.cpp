@@ -6,13 +6,16 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:11:02 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/02 02:36:35 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/02 03:33:31 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
+Form::Form() : _name("DefaultForm"), _isSigned(false), _gradeToSign(0), _gradeToExecute(0)
+{
+}
 Form::Form(const std::string &name, int gradeToSign, int gradeToExecute)
 	: _name(name), _isSigned(false), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
 {
@@ -26,7 +29,6 @@ Form::Form(const Form &src) : _name(src._name), _isSigned(src._isSigned), _grade
 {
 }
 
-Form::~Form() {}
 
 Form &Form::operator=(const Form &src)
 {
@@ -34,6 +36,8 @@ Form &Form::operator=(const Form &src)
 		_isSigned = src._isSigned;
 	return *this;
 }
+
+Form::~Form() {}
 
 std::string Form::getName() const
 {
