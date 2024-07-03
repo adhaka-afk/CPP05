@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:18:42 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/03 01:21:12 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/03 03:55:32 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,5 @@ AForm *Intern::makeForm(const std::string &formName, const std::string &target)
 	}
 
 	std::cout << "Error: Form name '" << formName << "' does not exist." << std::endl;
-	return nullptr;
+	return NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:16:45 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/02 06:09:52 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/03 03:58:09 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 
 void ShrubberyCreationForm::action() const
 {
-	std::ofstream file(_target + "_shrubbery");
+	std::ofstream file((_target + "_shrubbery").c_str());
 	if (!file)
 	{
 		std::cerr << "Failed to create file: " + _target + "_shrubbery" << std::endl;
