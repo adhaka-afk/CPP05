@@ -6,7 +6,7 @@
 This module delves into exceptions and advanced C++ concepts such as inheritance, polymorphism, and the handling of abstract classes. The exercises simulate a bureaucratic system, testing the ability to create complex class hierarchies and manage exceptions effectively.
 ## Overview:
 
-The module consists of three exercises:
+The module consists of four exercises:
 
 ## Exercise 00:
 - Objective: Implementing a Bureaucrat class, representing a bureaucratic entity with a name and grade.
