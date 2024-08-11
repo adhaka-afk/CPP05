@@ -8,7 +8,7 @@ This module delves into exceptions and advanced C++ concepts such as inheritance
 
 The module consists of four exercises:
 
-## Exercise 00:
+## Exercise 00: Mommy, when I grow up, I want to be a bureaucrat!
 - Objective: Implementing a Bureaucrat class, representing a bureaucratic entity with a name and grade.
   
 **Key Features:**
